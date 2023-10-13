@@ -1,10 +1,10 @@
 ## Second place solution of the ICCV/CVPPA 2023 Deep Nutrient Deficiency challenge
 
-We present a holistic approach for high resolution image classification that won second place in the ICCV/CVPPA2023 Deep Nutrient Deficiency Challenge. The approach consists of a full pipeline of: 1) data distribution analysis to check potential domain shift, 2) backbone selection for a strong baseline model that scales up for high resolution input, 3) transfer learning that utilizes published pretrained models and continuous fine-tuning on small sub-datasets, 4) data augmentation for the diversity of training data and to prevent overfitting, 5) test-time augmentation to improve the prediction's robustness, and 6) "data soups" that conducts cross-fold model prediction average for smoothened final test results.
+We present a holistic approach for high resolution image classification that won second place in the [ICCV/CVPPA2023 Deep Nutrient Deficiency Challenge](https://cvppa2023.github.io/challenges/#deep-nutrient-deficiency---dikopshof---winter-wheat-and-winter-rye). The approach consists of a full pipeline of: 1) data distribution analysis to check potential domain shift, 2) backbone selection for a strong baseline model that scales up for high resolution input, 3) transfer learning that utilizes published pretrained models and continuous fine-tuning on small sub-datasets, 4) data augmentation for the diversity of training data and to prevent overfitting, 5) test-time augmentation to improve the prediction's robustness, and 6) "data soups" that conducts cross-fold model prediction average for smoothened final test results.
 
 ![workflow](demo/cvppa2023_workflow.png)
 
-This repository is based on [mmpretrain](https://github.com/open-mmlab/mmpretrain) toolbox.
+This repository is based on [mmpretrain](https://github.com/open-mmlab/mmpretrain) toolbox. A detailed technical report is available [here](https://arxiv.org/abs/2309.15277).
 
 ### Dataset preparation
 Download the datasets WW2020 and WR2021 based on https://github.com/jh-yi/DND-Diko-WWWR. Then split each subset into 5 folds, and organize the data as below:
