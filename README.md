@@ -2,7 +2,7 @@
 
 We present a holistic approach for high resolution image classification that won second place in the ICCV/CVPPA2023 Deep Nutrient Deficiency Challenge. The approach consists of a full pipeline of: 1) data distribution analysis to check potential domain shift, 2) backbone selection for a strong baseline model that scales up for high resolution input, 3) transfer learning that utilizes published pretrained models and continuous fine-tuning on small sub-datasets, 4) data augmentation for the diversity of training data and to prevent overfitting, 5) test-time augmentation to improve the prediction's robustness, and 6) "data soups" that conducts cross-fold model prediction average for smoothened final test results.
 
-![workflow](assets/cvppa2023_workflow.png)
+![workflow](demo/cvppa2023_workflow.png)
 
 This repository is based on [mmpretrain](https://github.com/open-mmlab/mmpretrain) toolbox.
 
@@ -53,7 +53,7 @@ where `[TASK]` represents `ww2020_fold1-1024px`, ..., `ww2020_fold5-1024px`, `wr
 
 Then, ensemble predictions through "data soups" for final test results:
 ```
-python tools/data_soup.py --pred-dir PKL_DIR --pred-fnames PRED_FNAMES --out-path OUTPUT_TXT_PATH
+python tools/cvppa_data_soup.py --pred-dir PKL_DIR --pred-fnames PRED_FNAMES --out-path OUTPUT_TXT_PATH
 ```
 
 ### Citation
