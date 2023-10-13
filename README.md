@@ -4,7 +4,7 @@ We present a holistic approach for high resolution image classification that won
 
 ![workflow](demo/cvppa2023_workflow.png)
 
-This repository is based on [mmpretrain](https://github.com/open-mmlab/mmpretrain) toolbox. A detailed technical report is available [here](https://arxiv.org/abs/2309.15277).
+This repository is based on [mmpretrain](https://github.com/open-mmlab/mmpretrain) toolbox (was v1.0.0). A detailed technical report is available [here](https://arxiv.org/abs/2309.15277).
 
 ### Dataset preparation
 Download the datasets WW2020 and WR2021 based on https://github.com/jh-yi/DND-Diko-WWWR. Then split each subset into 5 folds, and organize the data as below:
